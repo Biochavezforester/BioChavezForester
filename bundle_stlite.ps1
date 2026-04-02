@@ -46,7 +46,7 @@ $StliteConfig = @{
     entrypoint = "app.py"
     requirements = @(
         "streamlit", "pandas", "numpy", "plotly", "folium", 
-        "streamlit-folium", "openpyxl", "pyodide-http", "geopy"
+        "streamlit-folium", "openpyxl", "xlrd", "pyodide-http", "geopy"
     )
     files = $FilesConfig
 }
