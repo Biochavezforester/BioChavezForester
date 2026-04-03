@@ -613,3 +613,20 @@ footer p {
         font-size: 1.5rem;
     }
 }
+/* OPTIMIZACI\u00d3N M\u00d3VIL FINAL */
+@media (max-width: 768px) {
+    .tools-grid, .services-grid, .features-grid, .mv-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .info-card > div {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem !important;
+    }
+    
+    .nav-links {
+        display: none; /* Simplificaci\u00f3n para evitar errores de despliegue */
+    }
+}
