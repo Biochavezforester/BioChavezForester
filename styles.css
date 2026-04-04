@@ -158,15 +158,15 @@ h1 {
 
 /* Software Grid */
 section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     scroll-margin-top: 80px;
 }
 
 .section-title {
     font-size: 2.2rem;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
     line-height: 1.2;
     color: var(--primary-dark);
 }
