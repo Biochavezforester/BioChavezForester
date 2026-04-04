@@ -765,3 +765,161 @@ footer p {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+/* --- Estilos del Catálogo de Capacitación --- */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--bg-white);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+.tab-btn.active {
+    background: var(--primary-green);
+    color: #fff;
+    border-color: var(--primary-green);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.inst-badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    background: #e8f5e9;
+    color: var(--primary-green);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.course-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.btn-request {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-green);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-request:hover {
+    background: var(--primary-dark);
+}
+
+.cv-download-banner {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #000 100%);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 24px;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.cv-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv-text p {
+    opacity: 0.8;
+}
+
+.btn-cv {
+    padding: 1rem 2.5rem;
+    background: var(--gold-accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 143, 0, 0.3);
+}
+
+.btn-cv:hover {
+    transform: scale(1.05);
+    background: #ff9800;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .cv-download-banner {
+        text-align: center;
+        justify-content: center;
+    }
+    .btn-cv { width: 100%; }
+}
