@@ -12,8 +12,6 @@
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
     --gold-accent: #FF8F00;
     --accent-formal: #2E7D32;
-    --accent-red: #D32F2F;
-    --bg-card: #FFFFFF;
 }
 
 * {
@@ -420,126 +418,17 @@ footer p {
 
 /* Success Stories */
 .success-card {
-    background: var(--bg-card);
+    background: #fff;
     border-radius: 20px;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border);
-    transition: 0.3s;
-}
-
-.success-card:hover {
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-}
-
-.success-img-container {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    min-height: 400px;
-}
-
-.success-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.success-card:hover .success-img-container img {
-    transform: scale(1.05);
-}
-
-.success-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--accent-red);
-    color: #fff;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.success-info {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.success-info h3 {
-    font-size: 1.8rem;
-    color: var(--primary-dark);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.success-info p {
-    color: var(--text-medium);
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.scientific-meta {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 12px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-    border-left: 4px solid var(--primary-green);
-}
-
-.scientific-meta div {
-    font-size: 0.85rem;
-    color: var(--text-dark);
-}
-
-.scientific-meta b {
-    display: block;
-    color: var(--text-light);
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-bottom: 0.2rem;
-}
-
-.institutions-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    align-items: center;
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-}
-
-.institutions-row span {
-    width: 100%;
-    font-size: 0.7rem;
-    color: var(--text-light);
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.inst-logo {
-    background: #f0f4f0;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--primary-green);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
 }
 
 @media (max-width: 968px) {
     .success-card { grid-template-columns: 1fr; }
-    .success-img-container { height: 350px; min-height: 350px; }
-    .success-info { padding: 2rem; }
+    .success-img-container { height: 350px; }
 }
 
 @media (max-width: 768px) {
