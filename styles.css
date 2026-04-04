@@ -344,6 +344,7 @@ footer p {
 /* Sub-header Pages */
 .sub-header {
     height: auto;
+    min-height: 0; /* Evita heredar 100vh del selector 'header' general */
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-dark) 100%);
