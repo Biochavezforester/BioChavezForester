@@ -288,6 +288,60 @@ section {
     font-size: 0.8rem;
 }
 
+/* Servicios Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 3.5rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-green);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--primary-light);
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-card p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
 /* Contacto */
 .contact-grid {
     display: grid;
