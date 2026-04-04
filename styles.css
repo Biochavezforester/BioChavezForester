@@ -767,3 +767,133 @@ footer p {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
+
+/* Casos de Éxito - Estilos Premium */
+.success-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.success-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.4s ease;
+}
+
+.success-card:hover {
+    transform: translateY(-10px);
+}
+
+.success-img-container {
+    height: 100%;
+    min-height: 400px;
+    position: relative;
+}
+
+.success-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.success-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-green);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.success-info {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.success-info h3 {
+    font-size: 1.8rem;
+    color: var(--accent-formal);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.success-info p {
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.scientific-meta {
+    background: #f8fbfa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #eef6f3;
+}
+
+.scientific-meta div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.scientific-meta b {
+    color: var(--primary-green);
+}
+
+.scientific-meta span {
+    color: var(--text-dark);
+}
+
+.institutions-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.institutions-row span {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.inst-logo {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+@media (max-width: 968px) {
+    .success-card {
+        grid-template-columns: 1fr;
+    }
+    .success-img-container {
+        height: 350px;
+        min-height: auto;
+    }
+    .success-info {
+        padding: 2rem;
+    }
+}
+
