@@ -166,14 +166,14 @@
                         Documentado mediante un modelo de monitoreo sistemático en la Sierra Madre Occidental.</p>
 
                     <div class="scientific-meta">
-                        <div><b>Especie:</b> <span>Panthera onca (Jaguar)</span></div>
+                        <div><b>Especie:</b> <span><i>Panthera onca</i> (Jaguar)</span></div>
                         <div><b>Confirmación:</b> <span>Diciembre 2025</span></div>
                         <div><b>Localidad:</b> <span>Pueblo Nuevo, Durango</span></div>
-                        <div><b>Método:</b> <span>Fototrampeo de Alta Tecnología</span></div>
+                        <div><b>Método:</b> <span>Fototrampeo</span></div>
                     </div>
 
-                    <div class="institutions-row">
-                        <span>Colaboración Institucional:</span>
+                    <div class="institutions-row" style="justify-content: center; text-align: center;">
+                        <span style="text-align: center;">Colaboración Institucional:</span>
                         <div class="inst-logo">TecNM Campus Valle del Guadiana</div>
                         <div class="inst-logo">SRNyMA Durango</div>
                         <div class="inst-logo">Arizona Game & Fish</div>
@@ -281,11 +281,21 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="margin-top: 5rem;">
         <div class="container">
             <p>&copy; 2026 | Biol. Erick Elio Chavez Gurrola | biochavezforester.com</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" id="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption">
+            <h4 id="lightbox-title"></h4>
+            <p id="lightbox-text"></p>
+        </div>
+    </div>
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -301,6 +311,42 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
             });
+        });
+
+        // --- Lógica de Lightbox ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxText = document.getElementById('lightbox-text');
+        const closeBtn = document.getElementById('close-lightbox');
+
+        // Seleccionamos las imágenes clicables en Casos de Éxito
+        document.querySelectorAll('.success-img-container').forEach(container => {
+            container.style.cursor = 'pointer';
+            container.addEventListener('click', () => {
+                const img = container.querySelector('img');
+                const title = container.closest('.success-card').querySelector('h3').innerText;
+                const text = container.closest('.success-card').querySelector('p').innerText;
+
+                lightboxImg.src = img.src;
+                lightboxTitle.innerText = title;
+                lightboxText.innerText = text;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>
