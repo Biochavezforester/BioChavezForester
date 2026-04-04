@@ -396,6 +396,79 @@ footer p {
     opacity: 0.8;
 }
 
+/* Download Section Premium */
+.download-card {
+    margin-top: 5rem;
+    text-align: center;
+    border: 1px solid rgba(46, 139, 87, 0.2);
+    padding: 4rem 2rem;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(46, 139, 87, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(46, 139, 87, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.btn-execute-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 3rem;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-execute-main:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.4);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-green) 100%);
+}
+
+.btn-execute-main:active {
+    transform: translateY(-2px);
+}
+
+.btn-execute-main svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.btn-execute-main:hover svg {
+    transform: translateY(3px);
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(46, 125, 50, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+}
+
+.pulse-animation {
+    animation: pulse-ring 2s infinite;
+}
+
 /* Sub-header Pages */
 .sub-header {
     height: auto;
