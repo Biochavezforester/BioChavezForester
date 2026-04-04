@@ -344,23 +344,30 @@ footer p {
 /* Sub-header Pages */
 .sub-header {
     height: auto;
-    min-height: 0; /* Evita heredar 100vh del selector 'header' general */
-    display: flex;
-    align-items: center;
+    min-height: 0;
+    display: block; /* Cambiado de flex para mejor control de paddings simétricos */
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-dark) 100%);
     color: #fff;
-    padding-top: 110px; /* Suficiente para el nav */
-    padding-bottom: 15px; /* Reducido a la mitad */
+    padding-top: 120px; /* Espacio para el nav (70px) + 50px de margen superior */
+    padding-bottom: 50px; /* Margen inferior exacto de 50px para simetría */
+    text-align: center;
 }
 
 .sub-header h1 {
     color: #fff;
+    margin-bottom: 1rem;
+}
+
+.sub-header .subtitle {
+    margin-bottom: 0; /* Eliminamos el margen excesivo de 3rem */
+    color: rgba(255,255,255,0.9);
 }
 
 .sub-header .badge {
     background: rgba(255,255,255,0.1);
     color: #fff;
     border-color: rgba(255,255,255,0.3);
+    margin-bottom: 1.5rem;
 }
 
 .sub-header .subtitle {
