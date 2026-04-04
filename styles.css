@@ -343,13 +343,13 @@ footer p {
 
 /* Sub-header Pages */
 .sub-header {
-    min-height: 25vh;
+    height: auto;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-dark) 100%);
     color: #fff;
-    padding-top: 100px; /* Espacio para el nav fijo */
-    padding-bottom: 30px;
+    padding-top: 110px; /* Suficiente para el nav */
+    padding-bottom: 15px; /* Reducido a la mitad */
 }
 
 .sub-header h1 {
