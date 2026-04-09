@@ -65,6 +65,13 @@ nav {
     color: var(--text-dark);
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
 .nav-links li {
     position: relative;
 }
