@@ -101,11 +101,11 @@
         <div class="container nav-content">
             <div class="logo">BioChavez<span>Forester</span></div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#software">Software</a></li>
+                <li><a href="javascript:void(0)" data-scroll="inicio">Inicio</a></li>
+                <li><a href="javascript:void(0)" data-scroll="software">Software</a></li>
                 <li><a href="capacitacion">Capacitación</a></li>
-                <li><a href="#casos">Casos de Éxito</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="javascript:void(0)" data-scroll="casos">Casos de Éxito</a></li>
+                <li><a href="javascript:void(0)" data-scroll="contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -123,8 +123,8 @@
                 y bosques. Nuestras herramientas hacen posible ver lo que otros no ven y agilizar la toma de decisiones
                 basada en datos.</p>
             <div class="hero-btns">
-                <a href="#software" class="btn btn-primary">Ver Catálogo</a>
-                <a href="#contacto" class="btn btn-outline">Solicitar Licencia</a>
+                <a href="javascript:void(0)" data-scroll="software" class="btn btn-primary">Ver Catálogo</a>
+                <a href="javascript:void(0)" data-scroll="contacto" class="btn btn-outline">Solicitar Licencia</a>
             </div>
         </div>
     </header>
@@ -418,24 +418,11 @@
         </div>
     </div>
 
+    <!-- Script compartido para navegación limpia -->
+    <script src="scripts.js"></script>
+    
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('toggle');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('toggle');
-            });
-        });
-
-        // --- Lógica de Lightbox ---
+        // --- Lógica de Lightbox (Específica de la home) ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxTitle = document.getElementById('lightbox-title');

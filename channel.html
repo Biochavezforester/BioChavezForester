@@ -29,10 +29,10 @@
         <div class="container nav-content">
             <div class="logo">BioChavez<span>Forester</span></div>
             <ul class="nav-links">
-                <li><a href="/#inicio">Inicio</a></li>
-                <li><a href="/#software">Software</a></li>
+                <li><a href="javascript:void(0)" data-scroll="inicio">Inicio</a></li>
+                <li><a href="javascript:void(0)" data-scroll="software">Software</a></li>
                 <li><a href="capacitacion">Capacitación</a></li>
-                <li><a href="/#contacto">Contacto</a></li>
+                <li><a href="javascript:void(0)" data-scroll="contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -126,22 +126,7 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('toggle');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('toggle');
-            });
-        });
-    </script>
+    <!-- Script compartido para navegación limpia -->
+    <script src="scripts.js"></script>
 </body>
 </html>
