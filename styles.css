@@ -72,8 +72,10 @@ nav {
     align-items: center;
 }
 
-.nav-links li {
-    position: relative;
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
 
 .nav-links a {
@@ -83,68 +85,10 @@ nav {
     transition: 0.3s;
     font-size: 0.85rem;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
 }
 
 .nav-links a:hover {
     color: var(--primary-green);
-}
-
-.arrow {
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
-}
-
-/* Dropdown Menu Desktop */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    min-width: 220px;
-    padding: 0.8rem 0;
-    list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-.dropdown-menu li {
-    width: 100%;
-}
-
-.dropdown-menu a {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.8rem;
-    color: var(--text-medium);
-    text-transform: none;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
-}
-
-.dropdown-menu a:hover {
-    background: rgba(46, 125, 50, 0.05);
-    color: var(--primary-green);
-}
-
-.nav-links li:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-.nav-links li:hover .arrow {
-    transform: rotate(180deg);
 }
 
 /* Hero */

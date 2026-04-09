@@ -32,25 +32,8 @@
             <div class="logo">BioChavez<span>Forester</span></div>
             <ul class="nav-links">
                 <li><a href="/#inicio">Inicio</a></li>
-                <li class="has-dropdown">
-                    <a href="javascript:void(0)">Software <span class="arrow">▾</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="channel">🎙️ CHANNEL</a></li>
-                        <li><a href="tania">🐾 TANIA</a></li>
-                        <li><a href="forxime">📊 FORXIME</a></li>
-                        <li><a href="ecometrics">📈 ECOMETRICS</a></li>
-                        <li><a href="channel_box">📦 CHANNEL BOX</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <a href="javascript:void(0)">Capacitación <span class="arrow">▾</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="capacitacion#tecnologia">🤖 Tecnología e IA</a></li>
-                        <li><a href="capacitacion#auditoria">📋 Consultoría</a></li>
-                        <li><a href="capacitacion#fauna">🌿 Vida Silvestre</a></li>
-                        <li><a href="capacitacion#internacional">🌍 Internacional</a></li>
-                    </ul>
-                </li>
+                <li><a href="/#software">Software</a></li>
+                <li><a href="capacitacion">Capacitación</a></li>
                 <li><a href="/#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -336,24 +319,11 @@
             hamburger.classList.toggle('toggle');
         });
 
-        // Dropdown toggle on mobile
-        document.querySelectorAll('.has-dropdown > a').forEach(dropdownToggle => {
-            dropdownToggle.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const parent = dropdownToggle.parentElement;
-                    parent.classList.toggle('mobile-active');
-                }
-            });
-        });
-
-        // Cerrar menú al hacer clic en un enlace que no sea un disparador de dropdown
+        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (!link.parentElement.classList.contains('has-dropdown') || window.innerWidth > 768) {
-                    navLinks.classList.remove('active');
-                    hamburger.classList.remove('toggle');
-                }
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('toggle');
             });
         });
     </script>
