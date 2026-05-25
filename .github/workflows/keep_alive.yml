@@ -2,8 +2,8 @@ name: Keep Streamlit Apps Warm
 
 on:
   schedule:
-    # Runs every 24 hours at 00:00 UTC (6:00 PM CST) to keep the apps awake
-    - cron: '0 0 * * *'
+    # Runs every 12 hours to keep the apps awake
+    - cron: '0 */12 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions UI
 
 jobs:
@@ -11,12 +11,20 @@ jobs:
     name: Ping Streamlit Applications
     runs-on: ubuntu-latest
     steps:
-      - name: Ping FORXIME 2.0
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright
         run: |
-          echo "Pinging FORXIME..."
-          curl -s -I "https://forxime2-0.streamlit.app/" | head -n 1
-      
-      - name: Ping ECOMETRICS
+          pip install playwright
+          playwright install chromium
+
+      - name: Run Wake-Up Script
         run: |
-          echo "Pinging ECOMETRICS..."
-          curl -s -I "https://bioecometrics.streamlit.app/" | head -n 1
+          python wake_apps.py
+
