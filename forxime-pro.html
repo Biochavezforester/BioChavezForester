@@ -237,14 +237,14 @@
                         <div style="margin-bottom: 2rem; text-align: left;">
                             <label style="font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 1rem; font-size: 1.1rem;">
                                 📸 Imágenes a procesar al año:
-                                <span id="image-count-val" style="color: #0277bd; font-size: 1.4rem; float: right; font-family: 'Outfit', sans-serif;">30,000</span>
+                                <span id="image-count-val" style="color: #0277bd; font-size: 1.4rem; float: right; font-family: 'Outfit', sans-serif;">50,000</span>
                             </label>
-                            <input type="range" id="roi-image-slider" min="1000" max="100000" step="1000" value="30000" 
+                            <input type="range" id="roi-image-slider" min="5000" max="250000" step="5000" value="50000" 
                                    style="width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; outline: none; -webkit-appearance: none; cursor: pointer;">
                             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-light); margin-top: 0.5rem;">
-                                <span>1,000</span>
-                                <span>50,000</span>
-                                <span>100,000</span>
+                                <span>5,000</span>
+                                <span>125,000</span>
+                                <span>250,000</span>
                             </div>
                         </div>
 
@@ -266,12 +266,12 @@
                         
                         <div style="margin-bottom: 2rem;">
                             <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Tiempo Ahorrado en Gabinete:</span>
-                            <strong id="roi-time-saved" style="font-size: 2.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">297 horas</strong>
+                            <strong id="roi-time-saved" style="font-size: 2.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">500 horas</strong>
                         </div>
 
                         <div style="margin-bottom: 2rem;">
-                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Valor Económico Ahorrado:</span>
-                            <strong id="roi-money-saved" style="font-size: 2.2rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$74,250 MXN</strong>
+                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Valor Comercial del Trabajo:</span>
+                            <strong id="roi-money-saved" style="font-size: 2.2rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$25,000 MXN</strong>
                         </div>
 
                         <div id="roi-badge" style="background: #2e7d32; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);">
@@ -295,21 +295,24 @@
                     const count = parseInt(slider.value);
                     imageCountVal.innerText = count.toLocaleString('es-MX');
 
-                    // 9.9 horas de ahorro por cada 1,000 imágenes
-                    const hoursSaved = Math.round((count / 1000) * 9.9);
-                    timeSavedEl.innerText = `${hoursSaved} horas`;
+                    // 10 horas de ahorro manual por cada 1,000 imágenes (~0.01 horas por foto)
+                    const hoursSaved = Math.round(count * 0.01);
+                    timeSavedEl.innerText = `${hoursSaved.toLocaleString('es-MX')} horas`;
 
-                    // Valor por hora del Biólogo/Consultor = $250 MXN
-                    const moneySaved = Math.round(hoursSaved * 250);
-                    moneySavedEl.innerText = `$${moneySaved.toLocaleString('es-MX')} MXN`;
+                    // Valor comercial del procesamiento en consultoría = $0.50 MXN por imagen
+                    const marketValue = Math.round(count * 0.50);
+                    moneySavedEl.innerText = `$${marketValue.toLocaleString('es-MX')} MXN`;
 
-                    // Comparativa con la licencia comercial de $18,000 MXN
-                    if (moneySaved >= 18000) {
+                    // Comparativa con el costo de la licencia comercial ($18,000 MXN/año)
+                    const netReturn = marketValue - 18000;
+
+                    if (netReturn >= 0) {
                         badgeEl.style.background = '#2e7d32';
-                        badgeEl.innerText = '¡Licencia 100% amortizada y generando utilidades!';
+                        badgeEl.innerText = `¡Licencia amortizada! Ganancia extra de $${netReturn.toLocaleString('es-MX')} MXN`;
                     } else {
                         badgeEl.style.background = '#e67e22';
-                        badgeEl.innerText = 'Amortizando tu licencia comercial paso a paso';
+                        const missing = Math.abs(netReturn);
+                        badgeEl.innerText = `Amortizando licencia (Faltan $${missing.toLocaleString('es-MX')} MXN para recuperar inversión)`;
                     }
                 };
 
