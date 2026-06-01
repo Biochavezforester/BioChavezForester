@@ -248,34 +248,52 @@
                             </div>
                         </div>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; text-align: left; font-size: 0.9rem;">
+                        <div style="display: flex; flex-direction: column; gap: 1.2rem; text-align: left; font-size: 0.9rem;">
                             <div>
-                                <b style="color: var(--text-dark); display: block; margin-bottom: 0.3rem;">🐢 Procesamiento Manual:</b>
-                                <span style="color: var(--text-medium); font-size: 0.85rem;">~10 horas por cada 1,000 fotos de gabinete.</span>
+                                <b style="color: #c0392b; display: block; margin-bottom: 0.3rem;">🐢 Procesamiento Manual:</b>
+                                <span style="color: var(--text-medium); font-size: 0.85rem; line-height: 1.4; display: block;">
+                                    ~16.6 horas por cada 1,000 fotos (clasificación + análisis + reportes). Costo de jornada estimado en <b>$1,280 MXN/día</b> ($160 MXN/h).
+                                </span>
                             </div>
-                            <div>
-                                <b style="color: #0277bd; display: block; margin-bottom: 0.3rem;">⚡ Procesamiento FORXIME PRO:</b>
-                                <span style="color: var(--text-medium); font-size: 0.85rem;">~3 minutos con aceleración GPU local.</span>
+                            <div style="border-top: 1px solid #eee; padding-top: 0.8rem;">
+                                <b style="color: #27ae60; display: block; margin-bottom: 0.3rem;">⚡ Con FORXIME PRO:</b>
+                                <span style="color: var(--text-medium); font-size: 0.85rem; line-height: 1.4; display: block;">
+                                    ~2.1 horas por cada 1,000 fotos de revisión y validación asistida de metadatos/IA.
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Panel de Resultados -->
-                    <div style="background: linear-gradient(135deg, rgba(2, 119, 189, 0.01) 0%, rgba(2, 119, 189, 0.05) 100%); padding: 2.5rem; border-radius: 16px; border: 1.5px solid rgba(2, 119, 189, 0.2); text-align: center;">
-                        <h4 style="color: #0277bd; margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios Estimados</h4>
+                    <div style="background: linear-gradient(135deg, rgba(2, 119, 189, 0.01) 0%, rgba(2, 119, 189, 0.05) 100%); padding: 2.2rem; border-radius: 16px; border: 1.5px solid rgba(2, 119, 189, 0.2); text-align: left;">
+                        <h4 style="color: #0277bd; margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">Comparativa de Costo y Tiempo</h4>
                         
-                        <div style="margin-bottom: 2rem;">
-                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Tiempo Ahorrado en Gabinete:</span>
-                            <strong id="roi-time-saved" style="font-size: 2.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">500 horas</strong>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 0.5rem;">
+                                <span style="font-size: 0.9rem; color: var(--text-medium);">🐢 Costo Real Manual:</span>
+                                <strong id="roi-cost-manual" style="font-size: 1.3rem; color: #c0392b; font-family: 'Outfit', sans-serif;">$132,750 MXN</strong>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 0.5rem;">
+                                <span style="font-size: 0.9rem; color: var(--text-medium);">⚡ Costo con FORXIME PRO:</span>
+                                <strong id="roi-cost-software" style="font-size: 1.3rem; color: #27ae60; font-family: 'Outfit', sans-serif;">$35,650 MXN</strong>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(2, 119, 189, 0.05); padding: 0.75rem; border-radius: 8px;">
+                                <span style="font-size: 0.9rem; color: var(--primary-dark); font-weight: 600;">💎 Ahorro Neto Anual:</span>
+                                <strong id="roi-net-savings" style="font-size: 1.5rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$97,100 MXN</strong>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 0.5rem; margin-top: 0.2rem;">
+                                <span style="font-size: 0.9rem; color: var(--text-medium);">⏱️ Tiempo Total Ahorrado:</span>
+                                <strong id="roi-time-saved" style="font-size: 1.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">725 horas</strong>
+                            </div>
                         </div>
 
-                        <div style="margin-bottom: 2rem;">
-                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Valor Comercial del Trabajo:</span>
-                            <strong id="roi-money-saved" style="font-size: 2.2rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$25,000 MXN</strong>
-                        </div>
-
-                        <div id="roi-badge" style="background: #2e7d32; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);">
-                            ¡Licencia 100% amortizada y generando utilidades!
+                        <div style="text-align: center;">
+                            <div id="roi-badge" style="background: #2e7d32; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.15); width: 100%; box-sizing: border-box; text-align: center;">
+                                ¡Licencia 100% amortizada y generando utilidades!
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,38 +305,50 @@
             document.addEventListener('DOMContentLoaded', () => {
                 const slider = document.getElementById('roi-image-slider');
                 const imageCountVal = document.getElementById('image-count-val');
+                const costManualEl = document.getElementById('roi-cost-manual');
+                const costSoftwareEl = document.getElementById('roi-cost-software');
+                const netSavingsEl = document.getElementById('roi-net-savings');
                 const timeSavedEl = document.getElementById('roi-time-saved');
-                const moneySavedEl = document.getElementById('roi-money-saved');
                 const badgeEl = document.getElementById('roi-badge');
 
                 const updateROI = () => {
                     const count = parseInt(slider.value);
                     imageCountVal.innerText = count.toLocaleString('es-MX');
 
-                    // 10 horas de ahorro manual por cada 1,000 imágenes (~0.01 horas por foto)
-                    const hoursSaved = Math.round(count * 0.01);
-                    timeSavedEl.innerText = `${hoursSaved.toLocaleString('es-MX')} horas`;
+                    // Manual: ~16.6 h y $132,750 MXN por cada 50,000 imágenes (~0.0166 h y $2.655 MXN por foto)
+                    const hoursManual = Math.round(count * 0.0166);
+                    const costManual = Math.round(count * 2.655);
 
-                    // Valor comercial del procesamiento en consultoría = $0.50 MXN por imagen
-                    const marketValue = Math.round(count * 0.50);
-                    moneySavedEl.innerText = `$${marketValue.toLocaleString('es-MX')} MXN`;
+                    // Con FORXIME PRO: ~2.1 h y $17,650 MXN de tiempo/revisión por cada 50,000 imágenes (~0.0021 h y $0.353 MXN por foto)
+                    const hoursSoftware = Math.round(count * 0.0021);
+                    const costSoftwareLabor = Math.round(count * 0.353);
+                    const licenseFee = 18000;
+                    const totalSoftware = costSoftwareLabor + licenseFee;
 
-                    // Comparativa con el costo de la licencia comercial ($18,000 MXN/año)
-                    const netReturn = marketValue - 18000;
+                    const netSavings = costManual - totalSoftware;
+                    const timeSaved = hoursManual - hoursSoftware;
 
-                    if (netReturn >= 0) {
+                    costManualEl.innerText = `$${costManual.toLocaleString('es-MX')} MXN`;
+                    costSoftwareEl.innerText = `$${totalSoftware.toLocaleString('es-MX')} MXN`;
+                    timeSavedEl.innerText = `${timeSaved.toLocaleString('es-MX')} horas`;
+
+                    if (netSavings >= 0) {
+                        netSavingsEl.innerText = `$${netSavings.toLocaleString('es-MX')} MXN`;
+                        netSavingsEl.style.color = '#0277bd';
                         badgeEl.style.background = '#2e7d32';
-                        badgeEl.innerText = `¡Licencia amortizada! Ganancia extra de $${netReturn.toLocaleString('es-MX')} MXN`;
+                        badgeEl.innerText = `¡Amortizado! Ahorro de $${netSavings.toLocaleString('es-MX')} MXN/año`;
                     } else {
+                        const loss = Math.abs(netSavings);
+                        netSavingsEl.innerText = `-$${loss.toLocaleString('es-MX')} MXN`;
+                        netSavingsEl.style.color = '#c0392b';
                         badgeEl.style.background = '#e67e22';
-                        const missing = Math.abs(netReturn);
-                        badgeEl.innerText = `Amortizando licencia (Faltan $${missing.toLocaleString('es-MX')} MXN para recuperar inversión)`;
+                        badgeEl.innerText = `Conviene manual (Punto de equilibrio a partir de ~9,000 fotos)`;
                     }
                 };
 
                 if (slider) {
                     slider.addEventListener('input', updateROI);
-                    updateROI(); // Ejecutar al inicio
+                    updateROI(); // Inicializar al cargar
                 }
             });
         </script>
