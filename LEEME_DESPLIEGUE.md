@@ -5,7 +5,7 @@ Este es tu proyecto web independiente. Está construido con tecnología pura (HT
 ## 📁 Estructura del Proyecto
 - `index.html`: Página principal (Landing Page).
 - `styles.css`: Diseño visual y adaptabilidad móvil.
-- `channel.html`, `tania.html`, etc.: Páginas de detalle de software.
+- `channel.html`, `forxime-pro.html`, etc.: Páginas de detalle de software.
 - `/assets/`: Guarda aquí los logos e imágenes de campo.
 - `/tesis/`: Guarda aquí los PDFs de tus tesis terminadas.
 
