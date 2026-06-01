@@ -76,7 +76,24 @@
                             </div>
                             <div>
                                 <h5 style="color: var(--primary-dark); margin-bottom: 0.5rem;">🛰️ Sensores Remotos Automatizados (GEE)</h5>
-                                <p style="font-size: 0.85rem; line-height: 1.4;">Conexión directa con Google Earth Engine para extraer automáticamente <b>13 variables ambientales clave</b> para cada punto de de muestreo: NDVI, EVI, NDWI, Altitud (m), Pendiente (°), Orientación (°), Rugosidad topográfica (TRI), Cobertura Arbórea (%), Sotobosque (%), Altura del Dosel (m), Temperatura Media (°C), Precipitación Anual (mm) y Distancia al Ecotono (m).</p>
+                                <p style="font-size: 0.82rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-medium);">Conexión directa con Google Earth Engine para extraer automáticamente <b>17 variables de alta precisión</b> para cada punto de muestreo:</p>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 1rem; font-size: 0.78rem; color: var(--text-medium); line-height: 1.3;">
+                                    <div>• Dist_Carretera_m</div>
+                                    <div>• Dist_Agua_m</div>
+                                    <div>• Altitud_m</div>
+                                    <div>• Pendiente_grados</div>
+                                    <div>• Cobertura_Vegetal_pct</div>
+                                    <div>• Dist_Poblado_m</div>
+                                    <div>• NDVI / NDWI / EVI</div>
+                                    <div>• Orientacion_grados</div>
+                                    <div>• TRI_Rugosidad</div>
+                                    <div>• Cobertura_Arborea_pct</div>
+                                    <div>• Sotobosque_pct</div>
+                                    <div>• Altura_Dosel_m</div>
+                                    <div>• Temp_Media_C</div>
+                                    <div>• Prec_Anual_mm</div>
+                                    <div>• Dist_Ecotono_m</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -205,6 +222,103 @@
                 </div>
             </div>
         </section>
+
+        <!-- Calculadora de ROI Interactiva -->
+        <section class="roi-section" style="margin-top: 3rem; margin-bottom: 5rem;">
+            <div style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                <h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 1.8rem;">📊 Calculadora de Retorno de Inversión (ROI)</h3>
+                <p style="text-align: center; color: var(--text-medium); max-width: 700px; margin: 0 auto 3rem auto; font-size: 0.95rem;">
+                    Desliza la barra para estimar el número de imágenes de fototrampeo que procesas al año y descubre el tiempo y dinero que ahorrarás utilizando **FORXIME PRO** frente al etiquetado manual tradicional.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+                    <!-- Panel de Controles -->
+                    <div style="background: #fdfdfd; padding: 2rem; border-radius: 16px; border: 1px solid #eee;">
+                        <div style="margin-bottom: 2rem; text-align: left;">
+                            <label style="font-weight: 700; color: var(--primary-dark); display: block; margin-bottom: 1rem; font-size: 1.1rem;">
+                                📸 Imágenes a procesar al año:
+                                <span id="image-count-val" style="color: #0277bd; font-size: 1.4rem; float: right; font-family: 'Outfit', sans-serif;">30,000</span>
+                            </label>
+                            <input type="range" id="roi-image-slider" min="1000" max="100000" step="1000" value="30000" 
+                                   style="width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; outline: none; -webkit-appearance: none; cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-light); margin-top: 0.5rem;">
+                                <span>1,000</span>
+                                <span>50,000</span>
+                                <span>100,000</span>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; text-align: left; font-size: 0.9rem;">
+                            <div>
+                                <b style="color: var(--text-dark); display: block; margin-bottom: 0.3rem;">🐢 Procesamiento Manual:</b>
+                                <span style="color: var(--text-medium); font-size: 0.85rem;">~10 horas por cada 1,000 fotos de gabinete.</span>
+                            </div>
+                            <div>
+                                <b style="color: #0277bd; display: block; margin-bottom: 0.3rem;">⚡ Procesamiento FORXIME PRO:</b>
+                                <span style="color: var(--text-medium); font-size: 0.85rem;">~3 minutos con aceleración GPU local.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Resultados -->
+                    <div style="background: linear-gradient(135deg, rgba(2, 119, 189, 0.01) 0%, rgba(2, 119, 189, 0.05) 100%); padding: 2.5rem; border-radius: 16px; border: 1.5px solid rgba(2, 119, 189, 0.2); text-align: center;">
+                        <h4 style="color: #0277bd; margin-bottom: 1.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios Estimados</h4>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Tiempo Ahorrado en Gabinete:</span>
+                            <strong id="roi-time-saved" style="font-size: 2.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">297 horas</strong>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <span style="font-size: 0.85rem; color: var(--text-medium); display: block;">Valor Económico Ahorrado:</span>
+                            <strong id="roi-money-saved" style="font-size: 2.2rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$74,250 MXN</strong>
+                        </div>
+
+                        <div id="roi-badge" style="background: #2e7d32; color: white; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);">
+                            ¡Licencia 100% amortizada y generando utilidades!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lógica de la Calculadora -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slider = document.getElementById('roi-image-slider');
+                const imageCountVal = document.getElementById('image-count-val');
+                const timeSavedEl = document.getElementById('roi-time-saved');
+                const moneySavedEl = document.getElementById('roi-money-saved');
+                const badgeEl = document.getElementById('roi-badge');
+
+                const updateROI = () => {
+                    const count = parseInt(slider.value);
+                    imageCountVal.innerText = count.toLocaleString('es-MX');
+
+                    // 9.9 horas de ahorro por cada 1,000 imágenes
+                    const hoursSaved = Math.round((count / 1000) * 9.9);
+                    timeSavedEl.innerText = `${hoursSaved} horas`;
+
+                    // Valor por hora del Biólogo/Consultor = $250 MXN
+                    const moneySaved = Math.round(hoursSaved * 250);
+                    moneySavedEl.innerText = `$${moneySaved.toLocaleString('es-MX')} MXN`;
+
+                    // Comparativa con la licencia comercial de $18,000 MXN
+                    if (moneySaved >= 18000) {
+                        badgeEl.style.background = '#2e7d32';
+                        badgeEl.innerText = '¡Licencia 100% amortizada y generando utilidades!';
+                    } else {
+                        badgeEl.style.background = '#e67e22';
+                        badgeEl.innerText = 'Amortizando tu licencia comercial paso a paso';
+                    }
+                };
+
+                if (slider) {
+                    slider.addEventListener('input', updateROI);
+                    updateROI(); // Ejecutar al inicio
+                }
+            });
+        </script>
     </main>
 
     <footer>
