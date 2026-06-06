@@ -119,8 +119,9 @@
                     silvestre, FORXIME permite transformar datos brutos de cámaras trampa en conocimiento científico
                     aplicable.</p>
 
+                <!-- FILA: 3 cards de features + upgrade card con botones al lado -->
                 <div class="features-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem;">
                     <div
                         style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eee;">
                         <h4 style="color: var(--accent-formal); margin-bottom: 0.5rem;">📊 Análisis de Comunidad</h4>
@@ -139,6 +140,10 @@
                         <p>Visualizaciones interactivas y reportes simplificados que cierran la brecha entre el campo y
                             la estadística compleja.</p>
                     </div>
+                </div>
+
+                <!-- FILA UPGRADE: upgrade card (izquierda) + botones CTA (derecha, llenando espacio vacío) -->
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
                     <!-- UPGRADE CARD -->
                     <a href="forxime-pro" style="
                         display: block;
@@ -167,81 +172,45 @@
                             margin-bottom: 0.8rem;
                         ">✨ Versión PRO</span>
                         <h4 style="color: #fff; margin-bottom: 0.6rem; font-size: 1rem;">¿Necesitas más poder?</h4>
-                        <p style="color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">IA Vision para identificar fauna, 17 variables satelitales vía GEE, modelos REM y reportes PDF automáticos.</p>
+                        <p style="color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">Redes neuronales para identificar fauna, 17 variables satelitales vía GEE, modelos REM y reportes PDF automáticos.</p>
                         <span style="color: #A5D6A7; font-size: 0.82rem; font-weight: 700;">Conocer FORXIME PRO →</span>
                     </a>
-                </div>
 
-                <!-- TABLA COMPARATIVA FREE VS PRO -->
-                <div style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2.5rem;">
-                    <h4 style="text-align: center; color: var(--primary-dark); margin-bottom: 0.5rem; font-size: 1.25rem;">¿Cuál versión necesitas?</h4>
-                    <p style="text-align: center; color: var(--text-medium); font-size: 0.9rem; margin-bottom: 2rem;">Compara y elige la herramienta correcta para tu proyecto.</p>
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
-                            <thead>
-                                <tr>
-                                    <th style="text-align: left; padding: 0.9rem 1rem; background: #f5f7fa; border-bottom: 2px solid #e0e0e0; color: var(--text-medium); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Característica</th>
-                                    <th style="text-align: center; padding: 0.9rem 1rem; background: #E8F5E9; border-bottom: 2px solid #A5D6A7; color: var(--primary-dark); font-size: 0.85rem;">FORXIME Free</th>
-                                    <th style="text-align: center; padding: 0.9rem 1rem; background: linear-gradient(135deg, #1B5E20, #00695C); border-bottom: 2px solid #1B5E20; color: #fff; font-size: 0.85rem; border-radius: 0 8px 0 0;">FORXIME PRO ✨</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid #f0f0f0;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Índices Shannon, Simpson, Pielou</td>
-                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">RAI y abundancia relativa</td>
-                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Dendrogramas Bray-Curtis</td>
-                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Clasificación automática con IA Vision</td>
-                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅ Gemini AI</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">17 variables satelitales por punto (GEE)</td>
-                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅ Automático</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Modelos REM y Royle-Nichols con IA</td>
-                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Reporte PDF científico automático (NLG)</td>
-                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Comparativa directa entre zonas/ejidos</td>
-                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Plataforma</td>
-                                    <td style="text-align: center; padding: 0.85rem; font-size: 0.85rem; color: var(--text-medium);">🌐 Web (Online)</td>
-                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); font-size: 0.85rem; color: var(--text-medium);">🖥️ Windows + GPU</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td style="padding: 1rem;"></td>
-                                    <td style="text-align: center; padding: 1rem;"><span style="background: #E8F5E9; color: var(--primary-dark); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700;">Gratis</span></td>
-                                    <td style="text-align: center; padding: 1rem; background: rgba(27,94,32,0.03);">
-                                        <a href="forxime-pro" style="background: linear-gradient(135deg, #1B5E20, #00695C); color: #fff; padding: 0.5rem 1.4rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-block;">Ver PRO →</a>
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                    <!-- ESPACIO CON BOTONES CTA DUALES -->
+                    <div style="
+                        background: white;
+                        border: 1px solid #eee;
+                        border-radius: 12px;
+                        padding: 2rem 2.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.2rem;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+                    ">
+                        <p style="margin: 0; font-size: 0.95rem; color: var(--text-medium); text-align: center; max-width: 400px;">
+                            Elige la herramienta que mejor se adapta a tu proyecto:
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                            <a href="https://forxime2-0.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-execute-main pulse-animation" style="background: #ff4b4b; box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3); font-size: 0.95rem; padding: 0.95rem 2rem;">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M13.13 22.19L11.5 18.35c-.74-1.74-2.26-3-4.13-3.39l-4.43-.92L11 11l.92-4.43c.39-1.87 1.65-3.39 3.39-4.13L19.19 1l-1.19 3.87c-.39 1.83.1 3.75 1.34 5.16L23 13l-3.66 3.66c-1.41 1.24-3.33 1.73-5.16 1.34L13.13 22.19z"/></svg>
+                                🚀 Probar Versión Free
+                            </a>
+                            <a href="forxime-pro" class="btn-execute-main" style="
+                                background: linear-gradient(135deg, #1B5E20 0%, #00695C 100%);
+                                box-shadow: 0 4px 20px rgba(27, 94, 32, 0.35);
+                                animation: none;
+                                font-size: 0.95rem;
+                                padding: 0.95rem 2rem;
+                            ">
+                                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                ✨ Conocer FORXIME PRO
+                            </a>
+                        </div>
+                        <p style="margin: 0; font-size: 0.78rem; color: var(--text-light); text-align: center;">
+                            ¿Procesas grandes volúmenes de imágenes? La versión PRO automatiza la identificación con redes neuronales, variables satelitales y el reporte completo.
+                        </p>
                     </div>
                 </div>
 
@@ -403,26 +372,11 @@
                         Accede a la versión oficial de <b>FORXIME</b>. Utiliza la plataforma interactiva en la nube para análisis inmediatos sin necesidad de instalación.</p>
                     
                     <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-                        <!-- BOTÓN PRINCIPAL - Free -->
                         <a href="https://forxime2-0.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-execute-main pulse-animation" style="background: #ff4b4b; box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);">
                             <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M13.13 22.19L11.5 18.35c-.74-1.74-2.26-3-4.13-3.39l-4.43-.92L11 11l.92-4.43c.39-1.87 1.65-3.39 3.39-4.13L19.19 1l-1.19 3.87c-.39 1.83.1 3.75 1.34 5.16L23 13l-3.66 3.66c-1.41 1.24-3.33 1.73-5.16 1.34L13.13 22.19z"/></svg>
-                            🚀 Probar Versión Free
-                        </a>
-                        <!-- BOTÓN SECUNDARIO - Pro -->
-                        <a href="forxime-pro" class="btn-execute-main" style="
-                            background: linear-gradient(135deg, #1B5E20 0%, #00695C 100%);
-                            box-shadow: 0 4px 20px rgba(27, 94, 32, 0.35);
-                            animation: none;
-                        ">
-                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            ✨ Conocer FORXIME PRO
+                            🚀 Probar en Línea
                         </a>
                     </div>
-                    <p style="margin-top: 1rem; font-size: 0.82rem; color: var(--text-medium); text-align: center;">
-                        ¿Procesas grandes volúmenes de imágenes? La versión PRO automatiza la identificación, las variables ambientales y el reporte completo.
-                    </p>
-
-
 
                     <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-medium); font-style: italic;">
                         El uso del software es completamente gratuito bajo la licencia MIT.</p>
@@ -448,6 +402,79 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.61-4.041-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             Ver en GitHub
                         </a>
+                    </div>
+                </div>
+
+                <!-- TABLA COMPARATIVA FREE VS PRO (al final, después de citación) -->
+                <div style="margin-top: 3rem; border-top: 2px solid #eee; padding-top: 2.5rem;">
+                    <h4 style="text-align: center; color: var(--primary-dark); margin-bottom: 0.4rem; font-size: 1.25rem;">¿Cuál versión necesitas?</h4>
+                    <p style="text-align: center; color: var(--text-medium); font-size: 0.9rem; margin-bottom: 2rem;">Compara y elige la herramienta correcta para tu proyecto.</p>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: left; padding: 0.9rem 1rem; background: #f5f7fa; border-bottom: 2px solid #e0e0e0; color: var(--text-medium); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Característica</th>
+                                    <th style="text-align: center; padding: 0.9rem 1rem; background: #E8F5E9; border-bottom: 2px solid #A5D6A7; color: var(--primary-dark); font-size: 0.85rem;">FORXIME Free</th>
+                                    <th style="text-align: center; padding: 0.9rem 1rem; background: linear-gradient(135deg, #1B5E20, #00695C); border-bottom: 2px solid #1B5E20; color: #fff; font-size: 0.85rem; border-radius: 0 8px 0 0;">FORXIME PRO ✨</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Índices Shannon, Simpson, Pielou</td>
+                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">RAI y abundancia relativa</td>
+                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Dendrogramas Bray-Curtis</td>
+                                    <td style="text-align: center; padding: 0.85rem;">✅</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03);">✅</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Clasificación automática de fauna (Redes Neuronales)</td>
+                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅ Redes Neuronales</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">17 variables satelitales por punto (GEE)</td>
+                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅ Automático</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Modelos REM y Royle-Nichols</td>
+                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Reporte PDF científico automático (NLG)</td>
+                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Comparativa directa entre zonas/ejidos</td>
+                                    <td style="text-align: center; padding: 0.85rem; color: #bbb;">—</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); color: var(--primary-green); font-weight: 700;">✅</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.85rem 1rem; color: var(--text-dark); font-weight: 500;">Plataforma</td>
+                                    <td style="text-align: center; padding: 0.85rem; font-size: 0.85rem; color: var(--text-medium);">🌐 Web (Online)</td>
+                                    <td style="text-align: center; padding: 0.85rem; background: rgba(27,94,32,0.03); font-size: 0.85rem; color: var(--text-medium);">🖥️ Windows + GPU</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td style="padding: 1rem;"></td>
+                                    <td style="text-align: center; padding: 1rem;"><span style="background: #E8F5E9; color: var(--primary-dark); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700;">Gratis siempre</span></td>
+                                    <td style="text-align: center; padding: 1rem; background: rgba(27,94,32,0.03);">
+                                        <a href="forxime-pro" style="background: linear-gradient(135deg, #1B5E20, #00695C); color: #fff; padding: 0.5rem 1.4rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-decoration: none; display: inline-block;">Ver FORXIME PRO →</a>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
