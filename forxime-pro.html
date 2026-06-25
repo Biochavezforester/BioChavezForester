@@ -392,7 +392,7 @@
                                 <span style="font-size: 0.9rem; color: var(--text-medium);">⚡ Costo con FORXIME
                                     PRO:</span>
                                 <strong id="roi-cost-software"
-                                    style="font-size: 1.3rem; color: #27ae60; font-family: 'Outfit', sans-serif;">$35,650
+                                    style="font-size: 1.3rem; color: #27ae60; font-family: 'Outfit', sans-serif;">$20,550
                                     MXN</strong>
                             </div>
 
@@ -401,7 +401,7 @@
                                 <span style="font-size: 0.9rem; color: var(--primary-dark); font-weight: 600;">💎 Ahorro
                                     Neto Anual:</span>
                                 <strong id="roi-net-savings"
-                                    style="font-size: 1.5rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$97,100
+                                    style="font-size: 1.5rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$112,200
                                     MXN</strong>
                             </div>
 
@@ -410,7 +410,7 @@
                                 <span style="font-size: 0.9rem; color: var(--text-medium);">⏱️ Tiempo Total
                                     Ahorrado:</span>
                                 <strong id="roi-time-saved"
-                                    style="font-size: 1.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">725
+                                    style="font-size: 1.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">819
                                     horas</strong>
                             </div>
                         </div>
@@ -445,9 +445,9 @@
                     const hoursManual = Math.round(count * 0.0166);
                     const costManual = Math.round(count * 2.655);
 
-                    // Con FORXIME PRO: ~2.1 h y $17,650 MXN de tiempo/revisión por cada 50,000 imágenes (~0.0021 h y $0.353 MXN por foto)
-                    const hoursSoftware = Math.round(count * 0.0021);
-                    const costSoftwareLabor = Math.round(count * 0.353);
+                    // Con FORXIME PRO: ~2.1 h y $2,550 MXN de tiempo/revisión por cada 50,000 imágenes (~0.00021 h y $0.051 MXN por foto)
+                    const hoursSoftware = Math.round(count * 0.00021);
+                    const costSoftwareLabor = Math.round(count * 0.051);
                     const licenseFee = 18000;
                     const totalSoftware = costSoftwareLabor + licenseFee;
 
@@ -468,7 +468,7 @@
                         netSavingsEl.innerText = `-$${loss.toLocaleString('es-MX')} MXN`;
                         netSavingsEl.style.color = '#c0392b';
                         badgeEl.style.background = '#e67e22';
-                        badgeEl.innerText = `Conviene manual (Punto de equilibrio a partir de ~9,000 fotos)`;
+                        badgeEl.innerText = `Conviene manual (Punto de equilibrio a partir de ~7,000 fotos)`;
                     }
                 };
 
