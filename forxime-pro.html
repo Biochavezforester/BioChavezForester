@@ -285,15 +285,16 @@
 
                     <div
                         style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-                        <a href="javascript:void(0)" class="btn-execute-main"
-                            style="padding: 1.1rem 2rem; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-weight: 700; text-decoration: none; background: #64748b; cursor: not-allowed; box-shadow: none;"
-                            title="Instalador en fase de pruebas piloto cerrada">
+                        <a href="https://drive.google.com/file/d/1RQomCPPzjlgcCZNIjapir0BbdJ9oUZbm/view?usp=sharing" class="btn-execute-main"
+                            style="padding: 1.1rem 2rem; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-weight: 700; text-decoration: none;"
+                            target="_blank" rel="noopener noreferrer"
+                            title="Descargar FORXIME PRO v2.0 para Windows">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;">
                                 <path
                                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-11H11v4H8l4 4 4-4h-3V9z" />
                             </svg>
-                            Descargar para Windows (Próximamente)
+                            Descargar para Windows
                         </a>
 
                         <a href="/#contacto" class="btn btn-outline"
@@ -304,9 +305,8 @@
 
                     <p
                         style="margin-top: 2rem; font-size: 0.82rem; color: var(--text-medium); max-width: 600px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.4;">
-                        💡 <b>Nota sobre el Lanzamiento:</b> El instalador profesional se encuentra en fase de pruebas
-                        piloto cerrada. Una vez liberado, podrás descargarlo libremente y validar la compatibilidad en
-                        tu hardware antes de activar tu licencia anual.
+                        💡 <b>Nota:</b> El instalador profesional está disponible para descarga.
+                        Valida la compatibilidad en tu hardware antes de activar tu licencia anual.
                     </p>
                 </div>
             </div>
@@ -362,7 +362,7 @@
                                 <b style="color: #27ae60; display: block; margin-bottom: 0.3rem;">⚡ Con FORXIME PRO:</b>
                                 <span
                                     style="color: var(--text-medium); font-size: 0.85rem; line-height: 1.4; display: block;">
-                                    ~2.1 horas por cada 10,000 fotos. Cubre el <b>ciclo automatizado completo</b>: desde
+                                    ~2 horas por cada 10,000 fotos. Cubre el <b>ciclo automatizado completo</b>: desde
                                     descargar de la memoria SD, clasificar con IA, validar rápidamente casos dudosos
                                     (más del 98% de precisión), extraer variables satelitales (GEE), calcular ecología
                                     estadística y exportar el reporte científico final en PDF.
@@ -392,7 +392,7 @@
                                 <span style="font-size: 0.9rem; color: var(--text-medium);">⚡ Costo con FORXIME
                                     PRO:</span>
                                 <strong id="roi-cost-software"
-                                    style="font-size: 1.3rem; color: #27ae60; font-family: 'Outfit', sans-serif;">$20,550
+                                    style="font-size: 1.3rem; color: #27ae60; font-family: 'Outfit', sans-serif;">$19,600
                                     MXN</strong>
                             </div>
 
@@ -401,7 +401,7 @@
                                 <span style="font-size: 0.9rem; color: var(--primary-dark); font-weight: 600;">💎 Ahorro
                                     Neto Anual:</span>
                                 <strong id="roi-net-savings"
-                                    style="font-size: 1.5rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$112,200
+                                    style="font-size: 1.5rem; color: #0277bd; font-family: 'Outfit', sans-serif;">$113,150
                                     MXN</strong>
                             </div>
 
@@ -410,7 +410,7 @@
                                 <span style="font-size: 0.9rem; color: var(--text-medium);">⏱️ Tiempo Total
                                     Ahorrado:</span>
                                 <strong id="roi-time-saved"
-                                    style="font-size: 1.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">819
+                                    style="font-size: 1.2rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">820
                                     horas</strong>
                             </div>
                         </div>
@@ -445,9 +445,9 @@
                     const hoursManual = Math.round(count * 0.0166);
                     const costManual = Math.round(count * 2.655);
 
-                    // Con FORXIME PRO: ~2.1 h y $2,550 MXN de tiempo/revisión por cada 50,000 imágenes (~0.00021 h y $0.051 MXN por foto)
-                    const hoursSoftware = Math.round(count * 0.00021);
-                    const costSoftwareLabor = Math.round(count * 0.051);
+                    // Con FORXIME PRO: ~10 h y $1,600 MXN de tiempo/revisión por cada 50,000 imágenes (~0.0002 h y $0.032 MXN por foto)
+                    const hoursSoftware = Math.round(count * 0.0002);
+                    const costSoftwareLabor = Math.round(count * 0.032);
                     const licenseFee = 18000;
                     const totalSoftware = costSoftwareLabor + licenseFee;
 
