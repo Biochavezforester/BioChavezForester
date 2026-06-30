@@ -375,7 +375,7 @@
                                     ~16.6 horas por cada 1,000 fotos. Cubre el <b>ciclo manual completo</b>: clasificar
                                     a ojo, extraer metadatos EXIF uno a uno, buscar variables del entorno externamente,
                                     calcular índices ecológicos en R/Excel y redactar el reporte a mano. Costo de
-                                    jornada de consultoría: <b>$1,280 MXN/día</b> ($160 MXN/h).
+                                    jornada de consultoría: <b>$315.04 MXN/día</b> (~$39.38 MXN/h).
                                 </span>
                             </div>
                             <div style="border-top: 1px solid #eee; padding-top: 0.8rem;">
@@ -461,13 +461,13 @@
                     const count = parseInt(slider.value);
                     imageCountVal.innerText = count.toLocaleString('es-MX');
 
-                    // Manual: ~16.6 h y $132,750 MXN por cada 50,000 imágenes (~0.0166 h y $2.655 MXN por foto)
+                    // Manual: ~16.6 h por cada 1,000 imágenes (~0.0166 h y $0.6537 MXN por foto)
                     const hoursManual = Math.round(count * 0.0166);
-                    const costManual = Math.round(count * 2.655);
+                    const costManual = Math.round(count * 0.6537);
 
-                    // Con FORXIME PRO: ~10 h y $1,600 MXN de tiempo/revisión por cada 50,000 imágenes (~0.0002 h y $0.032 MXN por foto)
+                    // Con FORXIME PRO: ~10 h de tiempo/revisión por cada 50,000 imágenes (~0.0002 h y $0.007876 MXN por foto)
                     const hoursSoftware = Math.round(count * 0.0002);
-                    const costSoftwareLabor = Math.round(count * 0.032);
+                    const costSoftwareLabor = Math.round(count * 0.007876);
                     const licenseFee = 18000;
                     const totalSoftware = costSoftwareLabor + licenseFee;
 
